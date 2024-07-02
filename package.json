@@ -1,0 +1,33 @@
+{
+  "name": "scrif",
+  "version": "0.0.1",
+  "description": "simple ternaries in npm scripts",
+  "main": "scrif.js",
+  "scripts": {
+    "test": "node test.js",
+    "branch-a": "echo 'BRANCH A' $@",
+    "branch-b": "echo 'BRANCH B' $@",
+    "test-scrif-1": "node scrif.js foo ? npm run branch-a : npm run branch-b ?",
+    "test-scrif-2": "node scrif.js foo ? npm run branch-a : npm run branch-b?"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jesseditson/scrif.git"
+  },
+  "keywords": [
+    "npm",
+    "scripts",
+    "if",
+    "conditional",
+    "ternary"
+  ],
+  "author": "Jesse Ditson <jesse.ditson@gmail.com>",
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/jesseditson/scrif/issues"
+  },
+  "homepage": "https://github.com/jesseditson/scrif#readme",
+  "devDependencies": {
+    "tape": "^5.8.1"
+  }
+}
