@@ -8,7 +8,8 @@
     "branch-a": "echo 'BRANCH A' $@",
     "branch-b": "echo 'BRANCH B' $@",
     "test-scrif-1": "node scrif.js foo ? npm run branch-a : npm run branch-b ?",
-    "test-scrif-2": "node scrif.js foo ? npm run branch-a : npm run branch-b?"
+    "test-scrif-2": "node scrif.js foo ? npm run branch-a : npm run branch-b?",
+    "test-scrif-3": "node scrif.js foo ? npm run branch-a : npm run branch-b"
   },
   "repository": {
     "type": "git",

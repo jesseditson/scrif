@@ -51,12 +51,15 @@ for (var i = 0; i < args.length; i++) {
     // handle a last question mark without a space before it
     if (a[a.length - 1] === "?") {
       phase++;
+      a = a.slice(0, -1);
     }
-    (phase === 2 ? c1 : c2).push(a);
+    (phase >= 2 ? c1 : c2).push(a);
   }
 }
-
-console.log(search, extra);
+if (phase !== 3) {
+  console.error("scrif: no final ? found.");
+  process.exit(1);
+}
 
 // Look through our extra args and if we find conditions, remove them.
 for (var i = 0; i < extra.length; i++) {
@@ -73,12 +76,9 @@ for (var i = 0; i < extra.length; i++) {
     break;
   }
 }
-console.log(search, extra);
-console.log(c1);
-console.log(c2);
 
 // If we found all the terms, phase will be 4.
-var ex = (phase === 4 ? c1 : c2).concat(extra);
+var ex = (phase === 4 ? c2 : c1).concat(extra);
 spawn(ex[0], ex.slice(1), {
   stdio: "inherit",
 });
