@@ -2,7 +2,7 @@
   "name": "scrif",
   "version": "0.1.0",
   "description": "simple ternaries in npm scripts",
-  "main": "scrif.js",
+  "bin": "scrif.js",
   "scripts": {
     "test": "node test.js",
     "branch-a": "echo 'BRANCH A' $@",
