@@ -9,7 +9,8 @@
     "branch-b": "echo 'BRANCH B' $@",
     "test-scrif-1": "node scrif.js foo ? npm run branch-a : npm run branch-b ?",
     "test-scrif-2": "node scrif.js foo ? npm run branch-a : npm run branch-b?",
-    "test-scrif-3": "node scrif.js foo ? npm run branch-a : npm run branch-b"
+    "test-scrif-3": "node scrif.js foo ? npm run branch-a : npm run branch-b",
+    "test-scrif-4": "node scrif.js fail ? ./exit-with-code.sh 1 : ./exit-with-code.sh 0 ?"
   },
   "repository": {
     "type": "git",

@@ -66,3 +66,12 @@ test("no trailing ?", function (t) {
   eq(t, c.status, 1);
   eq(t, c.stderr.toString().trim(), "scrif: no final ? found.");
 });
+test("exit code", function (t) {
+  t.plan(1);
+  try {
+    const o = exec("npm run test-scrif-4 fail; echo $?");
+    eq(t, o.toString().split("\n").at(-2), "1");
+  } catch (e) {
+    t.fail(e);
+  }
+});

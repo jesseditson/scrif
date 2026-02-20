@@ -79,6 +79,9 @@ for (var i = 0; i < extra.length; i++) {
 
 // If we found all the terms, phase will be 4.
 var ex = (phase === 4 ? c2 : c1).concat(extra);
-spawn(ex[0], ex.slice(1), {
+var child = spawn(ex[0], ex.slice(1), {
   stdio: "inherit",
+});
+child.on("exit", function (code) {
+  process.exit(code);
 });
