@@ -1,6 +1,6 @@
 {
   "name": "scrif",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "simple ternaries in npm scripts",
   "bin": "scrif.js",
   "scripts": {
